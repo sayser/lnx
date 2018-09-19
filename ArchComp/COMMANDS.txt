@@ -1,0 +1,61 @@
+(compress with gzip)
+#compresses the file and remove the original file
+gzip file_name
+#result file_name.gz
+
+(uncompress with gunzip)
+gunzip file_name.gz
+(or)
+gzip -d file_name.gz
+
+#show compression info on the gz file
+gzip -l
+
+(tar flags)
+tar -c  #compress
+tar -v #verbose
+tar -f # specify name of the archive
+
+(view archived files)
+tar -tf
+#example list files in .tar file
+tar -tf archive1.tar
+
+#example
+tar -cvf my_archive_name.tar dir1 dir2 file1 file2
+#this creates an archive, shows verbose info, puts archive in a file my_archive_name.tar
+
+
+(tar and gzip)
+tar -z #use gzip to compress
+
+#this will create archive(-c), verbosely(-v), gzip the archive(-z) and create the archive file my_archive.tar.gz (-f)
+tar -cvzf my_archive.tar.gz file1 dir1 file2
+
+(extract tar.gz)
+tar -x
+#example, extract(-x) uses gzip(-z), verboes (-v), file name (-f)
+tar -xzvf myarchive.tar.gz
+
+#show diff on files in archive and in the directory
+tar -dvf my_archive.tar
+
+
+
+#star
+#create an archive -c  archive name -f=name.tar   files to archive
+star -c -f=arch.tar f1.txt f2.txt
+
+#list content of archive
+star -t -f=archive.tar
+
+#extract with star -x
+star -x -f=myarch.tar
+
+#star -x does not override newer files when extracting, tar does!
+
+#extract specific file
+star -x -f=myarchive file_to_extract
+
+#compress with -z
+start -cz -f=filename.tar files to compress
