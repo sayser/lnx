@@ -1,0 +1,112 @@
+  334  grep 'abc' simple.txt 
+  335  grep '^abc' simple.txt 
+  336  grep -i '^abc' simple.txt 
+  337  grep -i '[^abc]' simple.txt 
+  338  grep '.' simple.txt 
+  339  grep '\.' simple.txt 
+  340  grep '\[' simple.txt 
+  341  grep '\*' simple.txt 
+  342  grep '\\' simple.txt 
+  343  grep 'coreyms\.com' simple.txt 
+  344  grep 'coreyms.com' simple.txt 
+  345  grep 'coreyms?com' simple.txt 
+  346  grep 'coreyms*com' simple.txt 
+  347  grep 'coreyms+com' simple.txt 
+  348  grep '^.' simple.txt 
+  356  grep '.' simple.txt 
+  373  grep "Jane Williams" names.txt 
+  374  grep "Jan" names.txt 
+  375  grep "John" names.txt 
+  376  grep "John Williams" names.txt 
+  377  grep -w "John Williams" names.txt 
+  378  grep -w -i "John Williams" names.txt 
+  379  grep -wi "John Williams" names.txt 
+  380  grep -win "John Williams" names.txt 
+  381  grep -win -B  "John Williams" names.txt 
+  382  grep -win -B 4  "John Williams" names.txt 
+  383  grep -win -A 4  "John Williams" names.txt 
+  384  grep -win -A 3  "John Williams" names.txt 
+  385  grep -win -C 3  "John Williams" names.txt 
+  387  grep -win -C 2  "John Williams" names.txt 
+  388  grep -iwn "John" names.txt 
+  389  grep -iwn -A 2"John" names.txt 
+  390  grep -iwn -A 2 "John" names.txt 
+  391  grep -iwn -B 2 "John" names.txt 
+  392  grep -iwn -C 2 "John" names.txt 
+  394  grep -iwn "John" ./* 
+  395  grep -iwn "John" ./.txt* 
+  396  grep -iwn "John" ./*txt 
+  397  grep -iwn "John" ./*.txt 
+  398  grep -iwn "John" ./ 
+  399  grep -iwnr "John" ./ 
+  400  grep -iwnr "John" .
+  401  grep -iwrl "John" .
+  402  grep -iwrc "John" .
+  406  history | grep "cat"
+  407  history | grep "cat" | grep ".txt"
+  410  grep "...-...-...." names.txt 
+  411  grep -n "...-...-...." names.txt 
+  412  grep -n "" names.txt 
+  413  grep -P "\d{3}-\d{3}-\d{4}" names.txt 
+  414  grep -Pn "\d{3}-\d{3}-\d{4}" names.txt 
+  415  grep -Pn -C 2 "\d{3}-\d{3}-\d{4}" names.txt 
+  416  grep -V
+  417  grep -Pl  "\d{3}-\d{3}-\d{4}" . 
+  418  grep -Pwirl  "\d{3}-\d{3}-\d{4}" . 
+  419  grep -Pwir  "\d{3}-\d{3}-\d{4}" names.txt 
+  420  grep -Pwi  "[a-zA-Z0-9_.+-]" names.txt 
+  421  grep -Pwi  "[a-zA-Z0-9_.+-]+@" names.txt 
+  422  grep -Pwi  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" names.txt 
+  423  grep -Pwin  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" names.txt 
+  424  grep -Pwin  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" names.txt | grep ^r
+  425  grep -Pwin  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" names.txt | grep "^r"
+  426  grep -Pwin  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" names.txt | grep "r"
+  427  grep -Pwin  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" names.txt | grep "^r"
+  428  grep -Pwi  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" names.txt | grep "^r"
+  429  grep -Pwi  "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" names.txt | grep "^rob"
+  433  grep -Pi "\d{3}.\d{3}.\d{4}" names.txt 
+  434  grep -Pi -C 1 "\d{3}.\d{3}.\d{4}" names.txt 
+  435  grep -Pi -B 1 "\d{3}.\d{3}.\d{4}" names.txt 
+  436  grep -Pi -B 1 "\d{3}.\d{3}.\d{4}" names.txt > names_numbers.txt
+  441  grep -Pln "\d{3}.\d{3}.\d{4}" .
+  442  grep -Pnl "\d{3}.\d{3}.\d{4}" .
+  443  grep -Pn -l "\d{3}.\d{3}.\d{4}" .
+  444  grep -Pwirl  "\d{3}-\d{3}-\d{4}" . 
+  445  grep -Pwil  "\d{3}-\d{3}-\d{4}" ./ 
+  446  grep -Pwir  "\d{3}-\d{3}-\d{4}" ./ 
+  447  grep -Pwirl  "\d{3}-\d{3}-\d{4}" ./ 
+  530  grep -P '^#' /etc/ssh/sshd_config 
+  531  sudo grep -P '^#' /etc/ssh/sshd_config 
+  532  grep -i 'rsaauth' /etc/ssh/ssh_config 
+  533  grep -i "serge" /etc/passwd
+  536  grep -P -i '[^#]' file.txt 
+  537  grep -P -i '^[^#]' file.txt 
+  538  grep -v '^#' file.txt 
+  539  grep  '^#' file.txt 
+  540  grep  '^hello' file.txt 
+  541  dmesg | grep 'memory'
+  544  grep 'world$' file.txt 
+  545  grep -i 'linuxacademy' file.txt 
+  546  grep -i '^linuxacademy$' file.txt 
+  547  grep -i '[Ll]inux[Aa]cademy file.txt 
+  548  grep -i '[Ll]inux[Aa]cademy' file.txt 
+  549  grep -i '^[Ll]inux[Aa]cademy' file.txt 
+  550  grep -i 'demy$' file.txt 
+  551  grep -P '(a)+' file.txt 
+  552  grep -P '(aca)+' file.txt 
+  553  grep -P '(c)+' file.txt 
+  554  grep -P '(a)+' file.txt 
+  555  grep -P '(a)?' file.txt 
+  556  grep -P '(a)*' file.txt 
+  557  grep -P '(a)?' file.txt 
+  558  grep '[Ll]...x' file.txt 
+  559  sudo grep -P 'nologin$' /etc/passwd
+  560  sudo grep -P 'bash$' /etc/passwd
+  561  sudo grep -P '[^nologin$]' /etc/passwd
+  562  sudo grep -P -v  'nologin$' /etc/passwd
+  566  grep '^[ha]' file.txt 
+  586  ls /etc | grep profile
+  718  yum search star | grep star
+  887  history | grep ^grep
+  889  history | grep "grep"
+  890  history | grep "grep" > GREP.txt
